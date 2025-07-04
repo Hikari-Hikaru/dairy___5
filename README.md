@@ -22,12 +22,21 @@
       display: block;
     }
 
+    .image-row {
+      display: flex;
+      flex-wrap: nowrap; /* 折り返さない */
+      justify-content: center;
+      gap: 16px; /* 画像間の余白 */
+      margin-top: 20px;
+      overflow-x: auto; /* 横スクロール可 */
+      padding-bottom: 10px; /* スクロールバーと画像の間に余白 */
+    }
+
     .watermark-container {
       position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 500px;
-      margin: 24px auto;
+      flex: 0 0 auto; /* 横並び固定 */
+      width: 80%; /* 画面幅の80%サイズ */
+      max-width: 400px;
     }
 
     .watermark {
@@ -51,6 +60,15 @@
       padding: 20px;
       text-align: center;
     }
+
+    /* 横スクロールバーを目立たせない（オプション） */
+    .image-row::-webkit-scrollbar {
+      height: 8px;
+    }
+    .image-row::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
@@ -63,24 +81,24 @@
     <p>
       少し前に久しぶりにおでかけしました✨<br>
       その時の写真です...（笑）<br><br>
-    </p>
-
-    <!-- image0 -->
-    <div class="watermark-container">
-      <img src="image0.jpeg" alt="おでかけ写真1" class="protected-photo" />
-      <div class="watermark">© HIKARI-HIKARU 2025</div>
-    </div>
-
-    <!-- image1 -->
-    <div class="watermark-container">
-      <img src="image1.jpeg" alt="おでかけ写真2" class="protected-photo" />
-      <div class="watermark">© HIKARI-HIKARU 2025</div>
-    </div>
-
-    <p>
       以上！<br><br>
       そんな感じです。笑
     </p>
+
+    <!-- 横並び画像 -->
+    <div class="image-row">
+      <!-- image0 -->
+      <div class="watermark-container">
+        <img src="image0.jpeg" alt="おでかけ写真1" class="protected-photo" />
+        <div class="watermark">© HIKARI-HIKARU 2025</div>
+      </div>
+
+      <!-- image1 -->
+      <div class="watermark-container">
+        <img src="image1.jpeg" alt="おでかけ写真2" class="protected-photo" />
+        <div class="watermark">© HIKARI-HIKARU 2025</div>
+      </div>
+    </div>
   </main>
 
   <div id="blackout"></div>
