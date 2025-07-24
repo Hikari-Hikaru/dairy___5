@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>2025年8月14日 - おでかけ〜♪</title>
+  <title>2025年7月28日 - おでかけ〜♪</title>
   <link rel="stylesheet" href="../style.css" />
 
   <style>
@@ -77,7 +77,7 @@
   </header>
 
   <main>
-    <h2>2025年8月14日 - おでかけ〜♪</h2>
+    <h2>2025年7月28日 - おでかけ〜♪</h2>
     <p>
       少し前に久しぶりにおでかけしました✨<br>
       その時の写真です...（笑）<br><br>
